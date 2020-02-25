@@ -1,0 +1,36 @@
+//sidebar
+$menuBg:#4a4e57;
+$subMenuBg:#3b3e45;
+$menuHover:#303541;
+
+// commoncolor
+$Primary:#F49B07;
+$Success:#54C61C;
+$Warning:#D5D10F;
+$Danger:#f53b4c;
+$Info:#A3A3A3;
+$InputError:#f44337;
+$SuccessHover:#56d78c;
+$DangerHover:#f98893;
+
+$MainText:#291002;
+$RegularText:#603214;
+$SecondaryText:#BBB0A9;
+$PlaceholderText:#BDBDBD;
+$Line:#e0e0e0;
+$Bg:#eeeeee;
+$BgLight:#f5f5f5;
+$White:#fff;
+
+/* 改变主题色变量 */
+$--color-primary:$Primary;
+$--color-text-primary:$MainText;
+$--color-text-regular:$RegularText;$--color-text-secondary:$SecondaryText;
+$--color-warning:$Warning;
+$--color-success:$Success;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';
+
