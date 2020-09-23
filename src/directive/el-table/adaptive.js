@@ -23,10 +23,12 @@ export default {
     el.resizeListener = () => {
       doResize(el, binding, vnode)
     }
-    // parameter 1 is must be "Element" type
     addResizeListener(window.document.body, el.resizeListener)
   },
   inserted(el, binding, vnode) {
+    doResize(el, binding, vnode)
+  },
+  updated(el, binding, vnode) {
     doResize(el, binding, vnode)
   },
   unbind(el) {

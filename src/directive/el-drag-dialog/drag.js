@@ -1,5 +1,17 @@
+/*
+ * @Author: qietuniu
+ * @Date: 2020-06-15 11:05:19
+ * @Last Modified by: qietuniu
+ * @Last Modified time: 2020-06-15 11:17:58
+ * @description: addResizeListener/removeResizeListener
+ */
+
 import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event'
 
+/**
+ * 获取样式
+ * currentStyle:该属性只兼容IE,不兼容火狐和谷歌;getComputedStyle:该属性是兼容火狐谷歌,不兼容IE
+ */
 const getStyle = (function() {
   if (window.document.currentStyle) {
     return (dom, attr) => dom.currentStyle[attr]
@@ -8,6 +20,12 @@ const getStyle = (function() {
   }
 })()
 
+/**
+ * 默认弹框参数
+ * @param {*} el
+ * @param {*} binding:https://cn.vuejs.org/v2/guide/custom-directive.html#%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0
+ * @param {*} vnode
+ */
 const init = (el, binding, vnode) => {
   const dragDom = el.querySelector('.el-dialog')
   const { value } = binding
@@ -38,7 +56,6 @@ export default {
       if (!isFullScreen) {
         nowHight = dragDom.clientHeight
         nowWidth = dragDom.clientWidth
-        debugger
         nowMarginTop = dragDom.style.marginTop == '0px' ? dragDom.style.top : dragDom.style.marginTop
         dragDom.style.left = 0
         dragDom.style.top = 0

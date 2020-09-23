@@ -13,7 +13,19 @@
         text-color="#b6b8bb"
         active-text-color="#fff"
       >
-      <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
+        <sidebar-item
+          v-for="route in routes"
+          :key="route.path"
+          :item="route"
+          :base-path="route.path"
+        />
+        <el-submenu index="12" class="noIcon">
+          <template slot="title">
+            <a href="https://www.qietuniu.com" class="outItem" target="_blank">
+              <item icon="center" title="博客"/>
+            </a>
+          </template>
+        </el-submenu>
       </el-menu>
     </el-scrollbar>
   </div>
@@ -24,8 +36,9 @@ import path from 'path'
 import { mapGetters } from 'vuex'
 import { validateURL } from '@/utils/validate'
 import SidebarItem from './SidebarItem'
+import Item from './Item'
 export default {
-  components: { SidebarItem },
+  components: { SidebarItem, Item },
   data() {
     return {
     }
@@ -70,10 +83,9 @@ export default {
 <style lang="scss">
 .outItem {
   color: rgb(182, 184, 187);
-
 }
-.noIcon{
-  .el-submenu__title i{
+.noIcon {
+  .el-submenu__title i {
     display: none;
   }
 }
