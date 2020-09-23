@@ -1,30 +1,11 @@
-### https://cli.vuejs.org/zh/guide/css.html#css-modules
-# vuebms
+# vuebms（持续更新中）
 
-## Project setup
-```
-yarn install
-```
+vue和Element的后台管理系统的实用技巧解决方案
+[预览地址](http://vuebms.qietuniu.com/)
+[博客地址](https://www.qietuniu.com/)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* [x] 自定义消息提醒
+* [x] 拖拽对话框
+* [x] 表格自适应js方法
+* [x] 滚动条样式
+* [x] 表格自适应flex布局

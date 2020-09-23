@@ -53,15 +53,6 @@ const routes = [{
     }
   },
   {
-    path: 'tree',
-    component: () => import('@/views/custom/tree'),
-    name: 'Tree',
-    meta: {
-      title: '树状图',
-      icon: 'user',
-      noCache: true
-    }
-  }, {
     path: 'ajustTable2',
     component: () => import('@/views/AjustTable2'),
     name: 'AjustTable2',
